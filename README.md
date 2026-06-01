@@ -3,7 +3,7 @@
 **Course:** Advanced Machine Learning — Spring 2026  
 **Module:** Federated Learning & Transfer Learning  
 **Team:** Non-IID
-**Last Updated:** May 30, 2026
+**Last Updated:** June 1, 2026
 
 ## 📋 Project Overview
 
@@ -18,6 +18,17 @@ This project addresses the **domain shift problem** in Federated Learning (FL), 
 **Key Result:** pFedMe achieves **0.835 accuracy** (8.3% improvement over FedAvg's 0.771) while matching Local-only (0.839), enabling global collaboration on heterogeneous data.
 
 **Dataset:** FLamby Heart Disease (920 samples, 4 medical centers: Cleveland, Hungary, Switzerland, LongBeach)
+
+##  Team Members
+
+| Name | Role |
+|------|------|
+| **HADJADJ DAOUD** | Data Scientist & ML Engineer |
+| **KHODJA FASSIH** | Data Scientist & ML Engineer |
+| **Koutchouk ABDERAHMANE** | Project Manager |
+| **Ouadi CHAIMA** | Research Lead |
+| **Bobaha ROZA** | Report/Presentation Lead |
+| **Rahal NADJIBA** | Report/Presentation Lead |
 
 ## 📁 Repository Structure
 
@@ -99,11 +110,11 @@ from flamby.datasets.fed_heart_disease import FedHeartDisease
 jupyter notebook notebooks/W3_federated_learning.ipynb
 ```
 
-**Expected Time:** ~5-10 minutes (20 rounds × 3 methods + ablation study)
+**Expected Time:** ~15-20 minutes (100 communication rounds × 3 methods + ablation study)
 
 **Expected Output:**
-- Per-center accuracies (Tables 3-5 in final_report.pdf)
-- Visualization: `figures/w3_experiments_comparison.png`
+- Per-center accuracies (Tables in final_report.pdf)
+- Convergence curves and per-center accuracy comparison
 - Logs: Console output showing round-by-round convergence
 
 ### Generate Reports & Slides
@@ -142,7 +153,7 @@ python src/generate_final_slides.py
 | Hyperparameter | Value |
 |---|---|
 | Model | Logistic Regression (L2, class_weight="balanced") |
-| Communication Rounds | 20 |
+| Communication Rounds | 100 |
 | Learning Rate | 0.01 |
 | Batch Size | Full dataset (no mini-batches) |
 | Aggregation | Weighted averaging (by center size) |
@@ -240,15 +251,6 @@ pFedMe's personalization parameter λ ∈ {0.0, 0.1, 0.5, 1.0}:
 
 5. **FLamby Dataset:** https://github.com/owkin/FLamby
 
-## 👥 Team & Contributions
-
-| Member | Primary Role | Contributions |
-|--------|---|---|
-| HADJADJ Daoud | ML Engineer & Implementation Lead | FedAvg/pFedMe implementations, experiments, evaluation |
-| KHODJA Fassih | Data Engineering & Analysis Lead | Data preprocessing, visualization, critical analysis |
-
-**Shared:** Report writing, slides, reproducibility verification
-
 ## 📞 Contact & Questions
 
 For questions about:
@@ -279,4 +281,4 @@ By studying this project, you will understand:
 
 ---
 
-**Last commit:** May 30, 2026 | **Status:** ✅ Project Complete
+**Last commit:** June 1, 2026 | **Status:** ✅ Project Complete
