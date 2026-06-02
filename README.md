@@ -69,6 +69,13 @@ pip install flwr flwr-datasets
 2. **Personalized (pFedMe):** `python src/train_pfedme.py`
 3. **Evaluation:** `python src/evaluate.py`
 
+## Updates by Fassih
+
+- Added a preprocessing pipeline with median imputation, engineered features, outlier clipping, and standardization.
+- Introduced train/val/test splits with stratification plus simple hyperparameter tuning for `C`.
+- Expanded evaluation metrics to include balanced accuracy, AUC-PR, and Brier score.
+- Updated notebooks to use the new preprocessing and tuning workflow.
+
 ## Key References
 
 - Dinh, C. T., et al. *pFedMe: Personalized Federated Learning with Moreau Envelopes.* NeurIPS 2020.
